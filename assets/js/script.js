@@ -113,7 +113,7 @@ function loaded() {
 		$(".player_audio").trigger('pause');
 		isPlaying = false;
 	  } else {
-		animate = setInterval(draw,200);
+		animate = setInterval(draw,150);
 		$(".player_audio").trigger('play');
 		isPlaying = true;
 	  }
@@ -122,7 +122,7 @@ function loaded() {
   });
   $("#btnRewind").click(function(){
     curr = 0;
-	animate = setInterval(draw,200);
+	animate = setInterval(draw,150);
     $(".player_audio").prop("currentTime",0);
 	$(".player_audio").trigger('play');
 	isPlaying = true;

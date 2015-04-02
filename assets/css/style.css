@@ -13,7 +13,7 @@ body {
 }
 
 #canvasContainer {
-  background: #999999;
+  background: url('../img/frames/000.png');
 }
 
 footer {
