@@ -95,26 +95,30 @@ function loaded() {
   var animate;
   var isPlaying = false;
   var selected = 0;
+  var fps = 7;
   
   // Draws each frame
   function draw() {
-	var img = new Image();
-	img = imgArr[curr];
-    ctx.drawImage(img, 0, 0, 1280, 720, 0, 0, canvas.width, canvas.height);
-	curr++;
-	if (curr >= n) {
-		clearInterval(animate);
-	}
+    setTimeout(function() {
+		animate = requestAnimationFrame(draw);
+		var img = new Image();
+		img = imgArr[curr];
+		ctx.drawImage(img, 0, 0, 1280, 720, 0, 0, canvas.width, canvas.height);
+		curr++;
+		if (curr >= n) {
+			clearInterval(animate);
+		}
+    }, 1000 / fps);
   }
   
   $("#btnPlayPause").click(function(){
 	  if (isPlaying) {
-		clearInterval(animate);
+		cancelAnimationFrame(animate);
 		$(".player_audio").trigger('pause');
 		isPlaying = false;
 	  } else {
 		$('#canvasContainer').attr("style","background:none;");
-		animate = setInterval(draw,150);
+		animate = requestAnimationFrame(draw);
 		$(".player_audio").trigger('play');
 		isPlaying = true;
 	  }
@@ -123,7 +127,7 @@ function loaded() {
   });
   $("#btnRewind").click(function(){
     curr = 0;
-	animate = setInterval(draw,150);
+	animate = requestAnimationFrame(draw);
     $(".player_audio").prop("currentTime",0);
 	$(".player_audio").trigger('play');
 	isPlaying = true;
