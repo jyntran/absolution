@@ -43,7 +43,6 @@ var numLoaded = 0;
 function check(){
 	numLoaded++;
     var percent = Math.floor((numLoaded / n) * 100);
-    /*$('.loaded').width(percent.toString()+'%');*/
     $('#progress span').text(percent.toString());
 	if (numLoaded >= n && !loadedCalled) {
 		loadedCalled = true;
@@ -85,7 +84,7 @@ function preload() {
 
 /* This is called when the images have been preloaded */
 function loaded() {
-	resize();
+  resize();
   $('#progress').hide();
   $(".player_audio").prop("muted",true);
   $('.player_audio').hide();
@@ -94,9 +93,9 @@ function loaded() {
   var curr = 0;
   var animate;
   var timeout;
-  var isPlaying = false;
-  var selected = 0;
   var fps = 7;
+  var selected = 0;
+  var isPlaying = false;
   
   // Draws each frame
   function draw() {
@@ -124,6 +123,7 @@ function loaded() {
 		$(".player_audio").trigger('play');
 		isPlaying = true;
 	  }
+     resize();
      return false;
      e.preventDefault();
   });
@@ -133,24 +133,35 @@ function loaded() {
     $(".player_audio").prop("currentTime",0);
 	$(".player_audio").trigger('play');
 	isPlaying = true;
+    resize();
 	return false;
     e.preventDefault();
   });
   
   $("form").click(function(){
 	  if ($("#optionMusic0").is(':checked')){
-	    selected = 0;
+	    selected = $("#optionMusic0").val();
 	    $(".player_audio").prop("muted",true);
       }
 	  if ($("#optionMusic1").is(':checked')){
-	    selected = 1;
+	    selected = $("#optionMusic0").val();
 	    $(".player_audio").prop("muted",true);
 	    $("#audio1").prop('muted',false);
       }
 	  if ($("#optionMusic2").is(':checked')){
-	    selected = 2;
+	    selected = $("#optionMusic0").val();
 	    $(".player_audio").prop("muted",true);
 	    $("#audio2").prop('muted',false);
+      }
+	  if ($("#optionMusic3").is(':checked')){
+	    selected = $("#optionMusic0").val();
+	    $(".player_audio").prop("muted",true);
+	    $("#audio3").prop('muted',false);
+      }
+	  if ($("#optionMusic4").is(':checked')){
+	    selected = $("#optionMusic0").val();
+	    $(".player_audio").prop("muted",true);
+	    $("#audio4").prop('muted',false);
       }
   });
 
