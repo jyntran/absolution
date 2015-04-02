@@ -16,3 +16,8 @@
 footer {
   text-align: center;
 }
+
+.player_audio {
+  height: 0;
+  width: 0;
+}

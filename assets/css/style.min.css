@@ -1,1 +1,1 @@
-body{font-family:arial}#content,#canvas{margin:auto;display:block}#progress{margin:auto;text-align:center}#canvasContainer{background:url(../img/000.png) center;background-size:cover;}footer{text-align:center}
+#content,#canvas{margin:auto;display:block}#progress{margin:auto;text-align:center}#canvasContainer{background:url('../img/000.png') center;background-size:cover}footer{text-align:center}.player_audio{height:0;width:0}
