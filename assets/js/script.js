@@ -113,6 +113,7 @@ function loaded() {
 		$(".player_audio").trigger('pause');
 		isPlaying = false;
 	  } else {
+		$('#canvasContainer').attr("style","background:none;");
 		animate = setInterval(draw,150);
 		$(".player_audio").trigger('play');
 		isPlaying = true;
