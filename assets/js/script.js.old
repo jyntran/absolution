@@ -1,0 +1,101 @@
+var container = document.getElementById("container");
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var images = "./assets/img/";
+var fonts = "./assets/fonts/";
+var frames = "./assets/img/f/";
+
+var img;
+var imgArr = new Array();
+
+var finished = false;
+
+var i = 1;
+var n = 0;
+
+//var myInterval = setInterval(preload,1);
+
+// Pads zeros
+function pad(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+
+// Start preload function
+function preload() {
+  $('#status').show();
+  
+  if (finished) {
+	  clearInterval(myInterval);
+	  return;
+  }
+  
+  if (!finished) {
+  img = new Image();
+  img.onload = function(){
+		imgArr.push(img);
+		i++;
+  };
+  img.onerror = function(){
+		finished = true;
+		loaded();
+  };
+  img.src = frames + pad(i, 3) + ".png";
+  }
+  
+} // End preload function
+
+function preload2(){
+  $.getJSON('files.php', function(data) {
+    console.log(data);
+  });
+}
+
+function loaded() {
+  
+$('#progress').hide();
+$('#all').show();
+	
+var animate = setInterval(loadImage, 250);
+	
+var curr = 1;
+
+n = imgArr.length;
+console.log(n);
+console.log(imgArr);
+
+// Draw
+function loadImage() {
+	  var img = new Image();
+	  img = imgArr[curr];
+      ctx.drawImage(img, 0, 0, 1280, 720, 0, 0, canvas.width, canvas.height);
+	  curr++;
+	  if (curr >= (n)) clearInterval(animate);
+}
+
+}
+
+//preload();
+preload2();
+
+/* Resize canvas to window width */
+function resize() {
+    var canvasRatio = canvas.height / canvas.width;
+    var windowRatio = window.innerHeight / window.innerWidth;
+    var width, height;
+
+    if (windowRatio < canvasRatio) {
+        height = window.innerHeight;
+        width = height / canvasRatio;
+    } else {
+        width = window.innerWidth;
+        height = width * canvasRatio;
+    }
+
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+};
+
+window.addEventListener('resize', resize, false);

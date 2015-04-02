@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+<title>Absolution</title>
+<meta name="description" src="FINE 225"/>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="about">
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Absolution</h1></div>
+  <div class="panel-body">
+    <p>FINE 225 self-directed project.</p>
+    <p>Attribution for Music:
+	<ol>
+	<li><a href="https://www.jamendo.com/en/track/601643/kreaten-13-galekeria"><em>Galerkeria</em> by Kreaten</a></li>
+	<li><a href="https://www.jamendo.com/en/track/102806/pelastusta-odotellessa-maanpinta"><em>Pelastusta odotellessa -maanpinta-</em> by Ristikiehtova</a></li>
+	</ol>
+	</p>
+  </div>
+</div>
+</div>
+
+<div id="progress">
+<!--
+<div class="progress">
+  <div class="progress-bar loaded" style="width: 0%;"></div>
+</div>
+-->
+     <h1><span>0</span>%</h1>
+	 <p>Loading frames...</p>
+</div>
+
+<div id="content">
+
+<div id="playbackContainer">
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="col-lg-3 col-xs-5">
+    <a href="#" class="btn btn-default" id="btnPlayPause">Play/Pause</a>
+    <a href="#" class="btn btn-default" id="btnRewind">Rewind</a>
+	</div>
+    <div class="col-lg-6 col-xs-7">	  
+	  <form class="form-horizontal" id="formMusic">
+	  <div class="form-group">
+          <strong class="col-lg-1 col-xs-3">Music:</strong>
+          <label class="col-lg-1 col-xs-3">
+            <input type="radio" name="optionMusic" id="optionMusic0" value="option0" checked="">
+            None
+          </label>
+          <label class="col-lg-1 col-xs-3">
+            <input type="radio" name="optionMusic" id="optionMusic1" value="option1">
+            1
+          </label>
+		  <label class="col-lg-1 col-xs-3">
+            <input type="radio" name="optionMusic" id="optionMusic2" value="option2">
+            2
+          </label>
+	  </div>
+	  </form>
+	</div>	  
+	
+	<div class="audio">
+	  <audio controls  class="player_audio" id="audio1">
+	    <source src="assets/sfx/Kreaten_-_KREATEN_-13-_Galekeria.mp3" type="audio/mpeg">
+	  </audio>
+	  <audio controls  class="player_audio" id="audio2">
+	    <source src="assets/sfx/Ristikiehtova_-_Pelastusta_odotellessa_-maanpinta-.mp3" type="audio/mpeg">
+	  </audio>
+	</div>
+	</div>
+	</div>
+</div>
+
+<div id="canvasContainer">
+  <canvas id="canvas" width="1280" height="720">Sorry! You can only use this if your browser supports HTML5.</canvas>
+</div>
+
+</div>
+
+<footer>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      &copy; <?php date_default_timezone_set('UTC'); echo date("Y"); ?> J. Tran
+    </div>
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>

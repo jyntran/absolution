@@ -1,0 +1,21 @@
+body {
+  font-family: arial; 
+}
+
+#content {
+  margin: auto;
+  font-family: arial;
+}
+
+#progress {
+  margin: auto;
+  text-align: center;
+}
+
+#canvasContainer {
+  background: #999999;
+}
+
+footer {
+  text-align: center;
+}
