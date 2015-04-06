@@ -1,27 +1,34 @@
 <!DOCTYPE html>
+
 <head>
-<title>Absolution</title>
-<meta charset="utf-8" /> 
-<meta name="description" src="FINE 225"/>
-<meta name="viewport" content="width=device-width">
-<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+  <title>Absolution</title>
+  <meta charset="utf-8" /> 
+  <meta name="description" src="FINE 225 self-directed project"/>
+  <meta name="viewport" content="width=device-width">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
 </head>
+
 <body>
 
+<!-- Progress indicator -->
 <div id="progress" class="col-lg-12">
      <h1><span>0</span>%</h1>
      <p>Loading frames...</p>
 </div>
 
+<!-- Main content -->
 <div id="content">
 
+<!-- Playback and Audio menu -->
 <div id="playbackContainer">
  <div class="panel panel-default">
   <div class="panel-body">
     <div class="col-lg-3 col-xs-4">
-    <a href="#" class="btn btn-default" id="btnPlayPause"><span class="glyphicon glyphicon-play"></span>/<span class="glyphicon glyphicon-pause"></span></a>
-    <a href="#" class="btn btn-default" id="btnRewind"><span class="glyphicon glyphicon-step-backward"></span></a>
+    <a href="#" title="Play/Pause" class="btn btn-default" id="btnPlayPause"><span class="glyphicon glyphicon-play"></span>/<span class="glyphicon glyphicon-pause"></span></a>
+    <a href="#" title="Rewind" class="btn btn-default" id="btnRewind"><span class="glyphicon glyphicon-step-backward"></span></a>
 	</div>
 	
     <div class="col-lg-6 col-xs-8">	  
@@ -71,27 +78,28 @@
  </div>
 </div>
 
+<!-- HTML5 Canvas -->
 <div id="canvasContainer">
   <canvas id="canvas" width="1280" height="720">Sorry! You can only view this if your browser supports HTML5 and Javascript.<br />Please update or use a different modern browser.</canvas>
 </div>
 
 </div>
 
-
+<!-- Information -->
 <div id="about" class="col-lg-12">
 <div class="panel panel-default col-lg-6 col-md-offset-3">
   <div class="panel-heading"><strong>Absolution</strong><br/>FINE 225 self-directed project</div>
   <div class="panel-body">
 
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-    <li><a href="#instructions" data-toggle="tab">Instructions</a></li>
-    <li><a href="#process" data-toggle="tab">Process</a></li>
-    <li><a href="#attribution" data-toggle="tab">Attribution</a></li>
+    <li class="active"><a href="#home" title="Home" data-toggle="tab">Home</a></li>
+    <li><a href="#instructions" title="Instructions" data-toggle="tab">Instructions</a></li>
+    <li><a href="#process" title="Process" data-toggle="tab">Process</a></li>
+    <li><a href="#attribution" title="Attribution" data-toggle="tab">Attribution</a></li>
   </ul>
   <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade active in" id="home">
-      <p>Inspired by the <a href="http://www.kwag.ca/en/exhibitions/EncounterswithMusic.asp"><em>Encounters with Music</em></a> exhibit at the Kitchener-Waterloo Art Gallery.</p>
+      <p>Inspired by the <a href="http://www.kwag.ca/en/exhibitions/EncounterswithMusic.asp" title="Encounters with Music @ KWAG"><em>Encounters with Music</em></a> exhibit at the Kitchener-Waterloo Art Gallery.</p>
       <p>What music do you hear accompanying the images?</p>
     </div>
     <div class="tab-pane fade" id="instructions">
@@ -107,15 +115,15 @@
         <li>View the sequence while listening to different audio tracks, taking note of ones that impact the work.</li>
         <li>Write code to create a frame animation player and create a webpage. <em>HTML5, CSS3, Javascript/jQuery</em></li>
       </ol>
-      <p>Work-in-progress and unused frames can be found <a href="https://www.dropbox.com/sh/0ep483rzvy2g5a4/AADu_BSntWSYmsLeGMGLD3dJa?dl=0">here on Dropbox</a>.</p>
+      <p>Work-in-progress and unused frames can be found <a href="https://www.dropbox.com/sh/0ep483rzvy2g5a4/AADu_BSntWSYmsLeGMGLD3dJa?dl=0" title="Dropbox">here on Dropbox</a>.</p>
     </div>
     <div class="tab-pane fade" id="attribution">
       <p>Music:
 	  <ol>
-	    <li><a href="https://www.jamendo.com/en/track/601643/kreaten-13-galekeria"><em>Galerkeria</em> by Kreaten</a></li>
-        <li><a href="https://www.jamendo.com/en/track/102806/pelastusta-odotellessa-maanpinta"><em>Pelastusta odotellessa -maanpinta-</em> by Ristikiehtova</a></li>
-        <li><a href="https://www.jamendo.com/en/track/1172858/suspense-and-tension-stem-10-30sec"><em>Suspense and Tension-stem-10-30sec</em> by 3minutetunes</a></li>
-        <li><a href="https://www.jamendo.com/en/track/778011/themakhyber"><em>ThemaKhyber</em> by Wa Rock Korean Music's</a></li>
+	    <li><a href="https://www.jamendo.com/en/track/601643/kreaten-13-galekeria" title="Galerkeria"><em>Galerkeria</em> by Kreaten</a></li>
+        <li><a href="https://www.jamendo.com/en/track/102806/pelastusta-odotellessa-maanpinta" title="Pelatusta odotellessa -maanpinta-"><em>Pelastusta odotellessa -maanpinta-</em> by Ristikiehtova</a></li>
+        <li><a href="https://www.jamendo.com/en/track/1172858/suspense-and-tension-stem-10-30sec" title="Suspense and Tension-stem-10-30sec"><em>Suspense and Tension-stem-10-30sec</em> by 3minutetunes</a></li>
+        <li><a href="https://www.jamendo.com/en/track/778011/themakhyber" title="ThemaKhyber"><em>ThemaKhyber</em> by Wa Rock Korean Music's</a></li>
 	  </ol>
 	  </p>
     </div>
@@ -124,17 +132,20 @@
  </div>
 </div>
 
+<!-- Footer -->
 <footer class="col-lg-12">
-  <div class="panel panel-default">
-    <div class="panel-body">
-      &copy; <?php echo date("Y"); ?> J. Tran
-    </div>
-  </div>
+      &copy; <? echo date("Y"); ?> <a href="http://jyntran.ca" title="J. Tran">J. Tran</a>
 </footer>
 
+<!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Bootstrap -->
 <script src="dist/js/bootstrap.min.js"></script>
+
+<!-- Frame animation script and preloading -->
 <script src="assets/js/script.min.js"></script>
+
 </body>
 
 </html>
