@@ -3,6 +3,7 @@ header('Content-type: text/html; charset=utf-8');
 
 $obj = new stdClass();
 
+// This is the directory to load the frames from
 $dir = "./assets/img/frames/";
 // Get all files and remove current and parent directories
 $arr = array_diff(scandir($dir), array('..', '.'));

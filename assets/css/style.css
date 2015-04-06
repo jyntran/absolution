@@ -8,6 +8,7 @@
   text-align: center;
 }
 
+/* Title screen only at start */
 #canvasContainer {
   background: url('../img/000.png') center;
   background-size: cover;
@@ -17,12 +18,15 @@ footer {
   text-align: center;
 }
 
+/* Centre Bootstrap columns */
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+/* In case audio players are still displaying */
 .player_audio {
   height: 0;
   width: 0;
 }
 
-.col-centered {
-  float: none;
-  margin: 0 auto;
-}
