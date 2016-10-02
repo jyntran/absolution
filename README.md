@@ -1,4 +1,4 @@
 # absolution
 Frame by frame animation with selectable audio with JS and Canvas
 
-[Live](http://jyntran.ca/absolution)
+[Live](http://absolution.jyntran.ca)
